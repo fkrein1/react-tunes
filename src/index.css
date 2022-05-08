@@ -118,6 +118,7 @@ color: white;
 border: none;
 }
 
+
 .searchBtn:hover {
   background-color: hsla(225, 100%, 30%, 1);
 }
