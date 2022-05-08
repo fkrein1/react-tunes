@@ -73,14 +73,14 @@ class Album extends React.Component {
   render() {
     const { musics, loading } = this.state;
     return (
-      <main data-testid="page-album ">
+      <main>
         <Header />
         { loading && <Loading /> }
         { !loading
           && (
             <div>
-              <h2 data-testid="artist-name">{ musics[0].artistName }</h2>
-              <h2 data-testid="album-name">{ musics[0].collectionName }</h2>
+              <h2>{ musics[0].artistName }</h2>
+              <h2>{ musics[0].collectionName }</h2>
               <MusicCard
                 musics={ musics.slice(1) }
                 changeFavorite={ this.changeFavorite }

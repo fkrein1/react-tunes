@@ -8,7 +8,6 @@ class Search extends React.Component {
     const {
       handlechange,
       value,
-      btnDisabled,
       btnSearchAlbums,
       searchResults,
       loading,
@@ -28,7 +27,6 @@ class Search extends React.Component {
           />
           <button
             type="submit"
-            disabled={ btnDisabled }
             onClick={ btnSearchAlbums }
           >
             Pesquisar

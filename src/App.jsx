@@ -10,7 +10,6 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-
       loading: false,
       searchResults: false,
       artistSearch: '',
@@ -22,18 +21,6 @@ class App extends React.Component {
   handleChange = ({ target }) => {
     const { value, name } = target;
     this.setState({ [name]: value });
-  }
-
-  btnDisabledLogin = () => {
-    const { user } = this.state;
-    const minLength = 3;
-    return user.length < minLength;
-  }
-
-  btnDisabledSearch = () => {
-    const { artistSearch } = this.state;
-    const minLength = 2;
-    return artistSearch.length < minLength;
   }
 
   btnSearchAlbums = async () => {
@@ -73,7 +60,6 @@ class App extends React.Component {
               <p>{ artistName }</p>
               <p>
                 <Link
-                  data-testid={ `link-to-album-${collectionId}` }
                   to={ `/album/${collectionId}` }
                 >
                   { collectionName }
@@ -104,7 +90,6 @@ class App extends React.Component {
               { ...props }
               handlechange={ this.handleChange }
               value={ artistSearch }
-              btnDisabled={ this.btnDisabledSearch() }
               btnSearchAlbums={ this.btnSearchAlbums }
               searchResults={ searchResults }
               albumsResult={ albumsResult }
