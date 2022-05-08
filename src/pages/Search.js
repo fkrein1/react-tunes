@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from './Loading';
 
+
 class Search extends React.Component {
   render() {
     const {
       handlechange,
       value,
-      btnDisabled,
       btnSearchAlbums,
       searchResults,
       loading,
@@ -18,17 +18,18 @@ class Search extends React.Component {
     return (
       <main>
         <Header />
-        <div>Search</div>
         <div>
           <input
+            className="searchBox"
             type="text"
             name="artistSearch"
+            placeholder='Artist Name'
             onChange={ handlechange }
             value={ value }
           />
           <button
+            className="searchBtn"
             type="submit"
-            disabled={ btnDisabled }
             onClick={ btnSearchAlbums }
           >
             Pesquisar

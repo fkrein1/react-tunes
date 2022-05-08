@@ -60,7 +60,7 @@ class Favorites extends React.Component {
   render() {
     const { favoriteSongs, loading } = this.state;
     return (
-      <main data-testid="page-favorites">
+      <main>
         <Header />
         { loading && <Loading /> }
         { !loading
