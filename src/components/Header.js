@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import style from './Header.module.css';
 
 
 class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className={ style.headerOne }>
+        <div className="headerOne">
           <img src="../assets/logo.png"/>
         </div>
-        <div className={ style.headerTwo }>
-          <Link to="/">Pesquisa</Link>
-          <Link to="/favorites">Favoritas</Link>
+        <div className="headerTwo">
+          <Link to="/">Search</Link>
+          <Link to="/favorites">Favorites</Link>
         </div>
       </header>
     );

@@ -1,4 +1,4 @@
-/* =========== RESET ============ */
+/* =========== GENERAL SETTINGS ============ */
 
 * {
   margin: 0;
@@ -37,4 +37,139 @@ img {
 
 ul {
   list-style: none;
+}
+
+h1 { 
+  margin-top: 12rem;
+  font-weight: 300;
+  font-size: 6rem;
+  line-height: 6.5rem;
+  color: #023031;
+}
+
+a { 
+  text-decoration: none;
+}
+
+/* ================ HEADER =============== */
+
+.headerOne {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.headerOne img {
+  margin-left: 3.5rem;
+  margin-block: 1.8rem;
+}
+
+.headerTwo {
+  background-color: var(--gray-bg);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 2.9rem;
+}
+
+.headerTwo a {
+  color: var(--secondary-color);
+  padding-block: 2rem;
+  width: 100%;
+  height:100%;
+  border: 1px solid #FFFFFF;
+}
+
+.headerTwo a:hover {
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+/* ======== SEARCH ============== */
+
+.searchBox { 
+  margin-top: 10rem;
+  width: 52rem;
+  height: 4.5rem;
+  border-radius: 0.6rem;
+  border: 1px solid #3D495C;
+  padding: 1.2rem 1.6rem;
+  margin-right: 2.7rem;
+}
+
+.searchBox::placeholder {
+  color: hsla(219, 12%, 48%, 1);
+  margin-left: 1.6rem;
+}
+
+.searchBtn {
+padding: 0.8rem 3.2rem;
+width: 13.5rem;
+height: 4.5rem;
+background: var(--royal-blue);
+border-radius: 0.2rem;
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 150%;
+color: white;
+border: none;
+}
+
+.searchBtn:hover {
+  background-color: hsla(225, 100%, 30%, 1);
+}
+
+/* ======== SEARCH RESULTS ============== */
+
+.search-results {
+  margin-top: 4rem;
+  margin-inline: 10rem;
+  font-family: 'Verdana';
+  color: #3D495C;
+}
+
+.search-results h2 {
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  color: #001813;
+  text-align: left;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 4rem;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.album {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  border: #E1E5EB 1px solid;
+  width: 20rem;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  text-align: left;
+}
+
+.album h3 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 150%;
+  margin: 0.8rem;
+}
+
+.album p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 150%;
+  margin-inline: 0.8rem;
+  margin-bottom: 0.8rem;
 }

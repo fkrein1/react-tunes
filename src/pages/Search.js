@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from './Loading';
-import style from './Search.module.css';
 
 
 class Search extends React.Component {
@@ -19,15 +18,17 @@ class Search extends React.Component {
     return (
       <main>
         <Header />
-        <div>Search</div>
         <div>
           <input
+            className="searchBox"
             type="text"
             name="artistSearch"
+            placeholder='Artist Name'
             onChange={ handlechange }
             value={ value }
           />
           <button
+            className="searchBtn"
             type="submit"
             onClick={ btnSearchAlbums }
           >
