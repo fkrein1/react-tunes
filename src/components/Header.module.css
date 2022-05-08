@@ -1,0 +1,5 @@
+.headerOne {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}

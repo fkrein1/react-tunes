@@ -41,7 +41,7 @@ class App extends React.Component {
   renderAlbums = () => {
     const { artistSearched, albumsResult } = this.state;
     if (albumsResult.length === 0) {
-      return <h1>Nenhum álbum foi encontrado</h1>;
+      return <h1>No albums were found</h1>;
     } return (
       <section>
         <h1>

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from './Loading';
+import style from './Search.module.css';
+
 
 class Search extends React.Component {
   render() {
