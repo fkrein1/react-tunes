@@ -4,4 +4,3 @@ React project using iTunes API to search artists and create an music player. Als
 ### Project prototype and page
 
 https://fkrein1.github.io/react-tunes/
-https://www.figma.com/file/BDQgAJvOe4KNUjmrYh5t68/TrybeTunes-Figma
