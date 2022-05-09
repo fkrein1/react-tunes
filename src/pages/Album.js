@@ -13,11 +13,11 @@ class Album extends React.Component {
   }
 
   componentDidMount() {
-    this.getFavoriteSongs();
+    this.getSavedMusic();
     this.renderMusics();
   }
 
-  renderMusics = async () => {
+  renderMusics = () => {
     this.setState({ loading: true },
       async () => {
         const { match } = this.props;
@@ -27,28 +27,9 @@ class Album extends React.Component {
       });
   }
 
-  getFavoriteSongs = async () => {
-    this.setState({ loading: true },
-      async () => {
-        const data = await getFavoriteSongs();
-        this.setState({ favoriteSongs: [...data], loading: false });
-      });
-  }
-
-  addFavoriteSong = async (song) => {
-    this.setState({ loading: true },
-      async () => {
-        await addSong(song);
-        this.setState({ loading: false });
-      });
-  }
-
-  removeFavoriteSong = async (song) => {
-    this.setState({ loading: true },
-      async () => {
-        await removeSong(song);
-        this.setState({ loading: false });
-      });
+  getSavedMusic = () => {
+        const data = getFavoriteSongs();
+        this.setState({ favoriteSongs: [...data] });;
   }
 
   isFavorite = (trackId) => {
@@ -61,12 +42,12 @@ class Album extends React.Component {
 
   changeFavorite = (song, trackID) => {
     if (this.isFavorite(trackID)) {
-      this.removeFavoriteSong(song);
-      this.getFavoriteSongs();
+      removeSong(song);
+      this.getSavedMusic();
     }
     if (!this.isFavorite(trackID)) {
-      this.addFavoriteSong(song);
-      this.getFavoriteSongs();
+      addSong(song);
+      this.getSavedMusic();
     }
   }
 
