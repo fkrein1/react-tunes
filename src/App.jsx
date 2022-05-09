@@ -27,7 +27,6 @@ class App extends React.Component {
     this.setState({ loading: true, artistSearch: '', searchResults: false },
       async () => {
         const albums = await searchAlbumsAPI(artistSearch);
-        console.log(albums);
         this.setState({
           loading: false,
           albumsResult: [...albums],
