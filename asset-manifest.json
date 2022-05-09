@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/react-tunes/static/css/main.b265aaee.chunk.css",
-    "main.js": "/react-tunes/static/js/main.3a867f0f.chunk.js",
-    "main.js.map": "/react-tunes/static/js/main.3a867f0f.chunk.js.map",
+    "main.js": "/react-tunes/static/js/main.e7f8f656.chunk.js",
+    "main.js.map": "/react-tunes/static/js/main.e7f8f656.chunk.js.map",
     "runtime-main.js": "/react-tunes/static/js/runtime-main.bfe7979b.js",
     "runtime-main.js.map": "/react-tunes/static/js/runtime-main.bfe7979b.js.map",
-    "static/js/2.9f4bdfff.chunk.js": "/react-tunes/static/js/2.9f4bdfff.chunk.js",
-    "static/js/2.9f4bdfff.chunk.js.map": "/react-tunes/static/js/2.9f4bdfff.chunk.js.map",
+    "static/js/2.cff6d714.chunk.js": "/react-tunes/static/js/2.cff6d714.chunk.js",
+    "static/js/2.cff6d714.chunk.js.map": "/react-tunes/static/js/2.cff6d714.chunk.js.map",
     "index.html": "/react-tunes/index.html",
     "static/css/main.b265aaee.chunk.css.map": "/react-tunes/static/css/main.b265aaee.chunk.css.map",
-    "static/js/2.9f4bdfff.chunk.js.LICENSE.txt": "/react-tunes/static/js/2.9f4bdfff.chunk.js.LICENSE.txt"
+    "static/js/2.cff6d714.chunk.js.LICENSE.txt": "/react-tunes/static/js/2.cff6d714.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bfe7979b.js",
-    "static/js/2.9f4bdfff.chunk.js",
+    "static/js/2.cff6d714.chunk.js",
     "static/css/main.b265aaee.chunk.css",
-    "static/js/main.3a867f0f.chunk.js"
+    "static/js/main.e7f8f656.chunk.js"
   ]
 }
