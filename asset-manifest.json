@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-tunes/static/css/main.b265aaee.chunk.css",
-    "main.js": "/react-tunes/static/js/main.9afeb3a2.chunk.js",
-    "main.js.map": "/react-tunes/static/js/main.9afeb3a2.chunk.js.map",
+    "main.js": "/react-tunes/static/js/main.3a867f0f.chunk.js",
+    "main.js.map": "/react-tunes/static/js/main.3a867f0f.chunk.js.map",
     "runtime-main.js": "/react-tunes/static/js/runtime-main.bfe7979b.js",
     "runtime-main.js.map": "/react-tunes/static/js/runtime-main.bfe7979b.js.map",
     "static/js/2.9f4bdfff.chunk.js": "/react-tunes/static/js/2.9f4bdfff.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.bfe7979b.js",
     "static/js/2.9f4bdfff.chunk.js",
     "static/css/main.b265aaee.chunk.css",
-    "static/js/main.9afeb3a2.chunk.js"
+    "static/js/main.3a867f0f.chunk.js"
   ]
 }
