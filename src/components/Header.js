@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
       <header>
         <div className="headerOne">
-          <img src="../assets/logo.png"/>
+          <img src={`${process.env.PUBLIC_URL}/logo.png`} />
         </div>
         <div className="headerTwo">
           <Link to="/">Search</Link>
