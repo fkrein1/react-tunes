@@ -28,8 +28,8 @@ class Album extends React.Component {
   }
 
   getSavedMusic = () => {
-        const data = getFavoriteSongs();
-        this.setState({ favoriteSongs: [...data] });;
+    const data = getFavoriteSongs();
+    this.setState({ favoriteSongs: [...data] });
   }
 
   isFavorite = (trackId) => {

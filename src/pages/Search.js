@@ -48,7 +48,6 @@ Search.propTypes = {
   handlechange: PropTypes.func.isRequired,
   btnSearchAlbums: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  btnDisabled: PropTypes.bool.isRequired,
   searchResults: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
   renderAlbums: PropTypes.func.isRequired,

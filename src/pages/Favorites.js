@@ -7,36 +7,17 @@ import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongs
 class Favorites extends React.Component {
   constructor() {
     super();
-    this.state = { loading: true, favoriteSongs: [] };
+    this.state = { favoriteSongs: [] };
   }
 
   componentDidMount() {
-    this.getFavoriteSongs();
+    this.getSavedMusic();
   }
 
-  getFavoriteSongs = async () => {
-    this.setState({ loading: true },
-      async () => {
-        const data = await getFavoriteSongs();
-        this.setState({ favoriteSongs: [...data], loading: false });
-      });
-  }
-
-  addFavoriteSong = async (song) => {
-    this.setState({ loading: true },
-      async () => {
-        await addSong(song);
-        this.setState({ loading: false });
-      });
-  }
-
-  removeFavoriteSong = async (song) => {
-    this.setState({ loading: true },
-      async () => {
-        await removeSong(song);
-        this.setState({ loading: false });
-      });
-  }
+  getSavedMusic =  () => {
+    const data = getFavoriteSongs();
+    this.setState({ favoriteSongs: [...data] });
+  };
 
   isFavorite = (trackId) => {
     const { favoriteSongs } = this.state;
@@ -48,23 +29,20 @@ class Favorites extends React.Component {
 
   changeFavorite = (song, trackID) => {
     if (this.isFavorite(trackID)) {
-      this.removeFavoriteSong(song);
-      this.getFavoriteSongs();
+      removeSong(song);
+      this.getSavedMusic();
     }
     if (!this.isFavorite(trackID)) {
-      this.addFavoriteSong(song);
-      this.getFavoriteSongs();
+      addSong(song);
+      this.getSavedMusic();
     }
   }
 
   render() {
-    const { favoriteSongs, loading } = this.state;
+    const { favoriteSongs } = this.state;
     return (
       <main>
         <Header />
-        { loading && <Loading /> }
-        { !loading
-          && (
             <div>
               <MusicCard
                 musics={ favoriteSongs }
@@ -72,7 +50,6 @@ class Favorites extends React.Component {
                 isFavorite={ this.isFavorite }
               />
             </div>
-          )}
       </main>
     );
   }

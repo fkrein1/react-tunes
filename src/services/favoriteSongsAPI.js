@@ -7,13 +7,15 @@ const saveFavoriteSongs = (favoriteSongs) => localStorage
 
 export const getFavoriteSongs = () => {
   const favoriteSongs = readFavoriteSongs();
+  if (favoriteSongs === null) return [];
   return favoriteSongs;
 };
 
 export const addSong = (song) => {
   if (song) {
     const favoriteSongs = readFavoriteSongs();
-    saveFavoriteSongs([...favoriteSongs, song]);
+    if (favoriteSongs === null) saveFavoriteSongs([ song]);
+    else saveFavoriteSongs([...favoriteSongs, song]);
   }
 };
 
