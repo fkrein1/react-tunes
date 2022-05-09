@@ -43,13 +43,13 @@ class Favorites extends React.Component {
     return (
       <main>
         <Header />
-            <div>
-              <MusicCard
-                musics={ favoriteSongs }
-                changeFavorite={ this.changeFavorite }
-                isFavorite={ this.isFavorite }
-              />
-            </div>
+          <div>
+            <MusicCard
+              musics={ favoriteSongs }
+              changeFavorite={ this.changeFavorite }
+              isFavorite={ this.isFavorite }
+            />
+          </div>
       </main>
     );
   }
