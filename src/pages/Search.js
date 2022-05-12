@@ -16,7 +16,7 @@ class Search extends React.Component {
     } = this.props;
 
     return (
-      <main>
+      <>
         <Header />
         <div>
           <input
@@ -39,7 +39,7 @@ class Search extends React.Component {
           { loading && <Loading />}
           { searchResults && renderAlbums() }
         </div>
-      </main>
+      </>
     );
   }
 }

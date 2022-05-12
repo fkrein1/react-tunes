@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Loading from './Loading';
-import MusicCard from '../components/MusicCard';
+import MusicCardFavorite from '../components/MusicCardFavorite';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 
 class Favorites extends React.Component {
@@ -41,16 +41,16 @@ class Favorites extends React.Component {
   render() {
     const { favoriteSongs } = this.state;
     return (
-      <main>
+      <>
         <Header />
-          <div>
-            <MusicCard
+          <div id="favorites">
+            <MusicCardFavorite
               musics={ favoriteSongs }
               changeFavorite={ this.changeFavorite }
               isFavorite={ this.isFavorite }
             />
           </div>
-      </main>
+      </>
     );
   }
 }

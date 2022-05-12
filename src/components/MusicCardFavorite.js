@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class MusicCard extends React.Component {
+class MusicCardFavorite extends React.Component {
   render() {
     const { musics, changeFavorite, isFavorite } = this.props;
     return (
       musics.map((music) => (
         <div key={ music.trackId } class="music-card">
+          <img src= {music.artworkUrl60 } class="mini-cover" alt={ music.trackName }/>
           <p>{ music.trackName }</p>
           <audio src={ music.previewUrl } controls>
             <track kind="captions" />
@@ -27,10 +28,10 @@ class MusicCard extends React.Component {
   }
 }
 
-MusicCard.propTypes = {
+MusicCardFavorite.propTypes = {
   musics: PropTypes.arrayOf.isRequired,
   isFavorite: PropTypes.func.isRequired,
   changeFavorite: PropTypes.func.isRequired,
 };
 
-export default MusicCard;
+export default MusicCardFavorite;

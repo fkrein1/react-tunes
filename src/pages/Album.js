@@ -54,22 +54,27 @@ class Album extends React.Component {
   render() {
     const { musics, loading } = this.state;
     return (
-      <main>
+      <>
         <Header />
         { loading && <Loading /> }
         { !loading
           && (
-            <div>
-              <h2>{ musics[0].artistName }</h2>
-              <h2>{ musics[0].collectionName }</h2>
-              <MusicCard
-                musics={ musics.slice(1) }
-                changeFavorite={ this.changeFavorite }
-                isFavorite={ this.isFavorite }
-              />
+            <div id="album-page">
+              <div id="album-cover">
+                <img src={ musics[0].artworkUrl100.replace('100x100bb.jpg', '300x300bb.jpg') } alt={ musics[0].collectionName } />
+                <h2>{ musics[0].artistName }</h2>
+                <h3>{ musics[0].collectionName }</h3>        
+              </div>
+              <div id="album-musics">
+                <MusicCard
+                  musics={ musics.slice(1) }
+                  changeFavorite={ this.changeFavorite }
+                  isFavorite={ this.isFavorite }
+                />
+              </div>
             </div>
           )}
-      </main>
+      </>
     );
   }
 }
