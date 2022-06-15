@@ -18,7 +18,7 @@ class Search extends React.Component {
     return (
       <>
         <Header />
-        <div>
+        <div id="seachSection">
           <input
             className="searchBox"
             type="text"
