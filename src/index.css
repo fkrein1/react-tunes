@@ -272,7 +272,7 @@ border: none;
   }
 
   .album {
-    max-width: 200px;
+    max-width: 150px;
   }
 
   #album-page {
@@ -285,7 +285,17 @@ border: none;
     width: 250px;
   }
 
+  .music-card {
+    flex-direction: column;
+    max-width: 350px;
+    align-items: center;
+    justify-content: center;
+  }
+
   #favorites {
     margin: 50px 30px;
+    display: flex;
+    align-items: center;
+
   }
 }
